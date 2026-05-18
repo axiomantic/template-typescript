@@ -20,7 +20,7 @@
   "bugs": { "url": "https://github.com/axiomantic/project-name/issues" },
   "homepage": "https://axiomantic.github.io/project-name/",
   "license": "MIT",
-  "author": "Elijah Shaw-Rutschman",
+  "author": "",
   "keywords": [],
   "scripts": {
     "build": "tsup",
