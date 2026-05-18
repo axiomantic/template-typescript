@@ -11,6 +11,7 @@ Usage:
 
 from __future__ import annotations
 
+import os
 import pathlib
 import sys
 
@@ -54,23 +55,28 @@ def main() -> int:
 
     new_kebab = sys.argv[1]
     new_snake = new_kebab.replace("-", "_")
-    root = pathlib.Path(".")
 
     rewritten = 0
-    for path in root.rglob("*"):
-        if not should_process(path):
-            continue
-        try:
-            original = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
-            # Binary file with a text-looking extension; skip.
-            continue
-        updated = original.replace("project_name", new_snake).replace(
-            "project-name", new_kebab
-        )
-        if updated != original:
-            path.write_text(updated, encoding="utf-8")
-            rewritten += 1
+    # Use os.walk with directory pruning instead of pathlib.rglob so we never
+    # descend into node_modules/, .git/, etc. — those trees can contain
+    # hundreds of thousands of files in a populated checkout.
+    for dirpath, dirnames, filenames in os.walk("."):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        for filename in filenames:
+            path = pathlib.Path(dirpath) / filename
+            if not should_process(path):
+                continue
+            try:
+                original = path.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                # Binary file with a text-looking extension; skip.
+                continue
+            updated = original.replace("project_name", new_snake).replace(
+                "project-name", new_kebab
+            )
+            if updated != original:
+                path.write_text(updated, encoding="utf-8")
+                rewritten += 1
 
     print(f"Rewrote {rewritten} file(s).")
     return 0
