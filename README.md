@@ -1,5 +1,7 @@
 # project-name
 
+[![npm version](https://img.shields.io/npm/v/@axiomantic/project-name.svg)](https://www.npmjs.com/package/@axiomantic/project-name) [![npm downloads](https://img.shields.io/npm/dm/@axiomantic/project-name.svg)](https://www.npmjs.com/package/@axiomantic/project-name) [![CI](https://github.com/axiomantic/project-name/actions/workflows/ci.yml/badge.svg)](https://github.com/axiomantic/project-name/actions/workflows/ci.yml) [![License](https://img.shields.io/npm/l/@axiomantic/project-name.svg)](./LICENSE) [![Types](https://img.shields.io/npm/types/@axiomantic/project-name.svg)](https://www.npmjs.com/package/@axiomantic/project-name) [![Node](https://img.shields.io/node/v/@axiomantic/project-name.svg)](https://www.npmjs.com/package/@axiomantic/project-name)
+
 PROJECT DESCRIPTION HERE.
 
 ## After using this template
