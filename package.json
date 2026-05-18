@@ -1,6 +1,6 @@
 {
   "name": "@axiomantic/project-name",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "TODO: project tagline",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -13,11 +13,25 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": { "node": ">=20" },
-  "publishConfig": { "access": "public", "provenance": true },
-  "repository": { "type": "git", "url": "git+https://github.com/axiomantic/project-name.git" },
-  "bugs": { "url": "https://github.com/axiomantic/project-name/issues" },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axiomantic/project-name.git"
+  },
+  "bugs": {
+    "url": "https://github.com/axiomantic/project-name/issues"
+  },
   "homepage": "https://axiomantic.github.io/project-name/",
   "license": "MIT",
   "author": "",
