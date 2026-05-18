@@ -1,0 +1,43 @@
+{
+  "name": "@axiomantic/project-name",
+  "version": "0.0.1",
+  "description": "TODO: project tagline",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "publishConfig": { "access": "public", "provenance": true },
+  "repository": { "type": "git", "url": "git+https://github.com/axiomantic/project-name.git" },
+  "bugs": { "url": "https://github.com/axiomantic/project-name/issues" },
+  "homepage": "https://axiomantic.github.io/project-name/",
+  "license": "MIT",
+  "author": "Elijah Shaw-Rutschman",
+  "keywords": [],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "fmt": "biome check --write .",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@tsconfig/node20": "^20.1.5",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/node": "^20.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
