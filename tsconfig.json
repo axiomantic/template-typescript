@@ -1,0 +1,12 @@
+{
+  "extends": ["@tsconfig/strictest/tsconfig.json", "@tsconfig/node20/tsconfig.json"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src", "tests"],
+  "exclude": ["dist", "node_modules", "docs"]
+}
