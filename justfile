@@ -32,7 +32,7 @@ release-preflight:
 # Manual fallback for template-cleanup (find/replace project_name -> kebab name).
 rename new_name:
     @echo "Renaming project-name -> {{new_name}}"
-    @python3 scripts/rename.py {{new_name}}
+    @python3 scripts/rename.py "{{new_name}}"
 
 # Remove build artifacts and caches
 clean:
