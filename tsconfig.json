@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": ".",
+    "ignoreDeprecations": "6.0",
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "noEmit": true
