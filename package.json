@@ -48,7 +48,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.4.15",
     "@tsconfig/node20": "^20.1.5",
-    "@tsconfig/strictest": "^2.0.5",
+    "@tsconfig/strictest": "^2.0.9",
     "@types/node": "^26.6.6",
     "@vitest/coverage-v8": "^4.1.6",
     "tsup": "^9.0.0",
